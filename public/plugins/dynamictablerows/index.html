@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic table rows by template</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<head>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row clearfix">
+      <div class="col-md-12 column">
+        <table class="table table-bordered table-hover" id="annotations">
+          <thead>
+            <tr>
+              <th class="text-center col-md-4">
+                Name
+              </th>
+              <th class="text-center col-md-4">
+                Value
+              </th>
+              <th class="text-center col-md-1"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id='annotations_template' title='annotation'>
+              <td>
+                <input type="text" name='annotation_name' placeholder='Keyword (i.e. Disease, Cell, Tissue)' class="form-control" />
+              </td>
+              <td>
+                <input type="text" name='annotation_value' placeholder='Value (i.e. Lung, Carcinoma)' class="form-control" />
+              </td>
+              <td>
+                <button name="annotation_add" class='btn btn-success glyphicon glyphicon-plus row-add'></button>
+                <button name="annotation_delete" class='btn btn-danger glyphicon glyphicon-remove row-remove'></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

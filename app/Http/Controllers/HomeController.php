@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Pegawai;
+use App\Penelitian;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $pegawai = Pegawai::where('deleted_at', NULL)->get();
+        $penelitian = Penelitian::where('deleted_at', NULL)->get();
+
+        return view('kegiatan_penelitian', ['pegawai'=>$pegawai, 'penelitian'=>$penelitian]);
     }
 }
